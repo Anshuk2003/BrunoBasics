@@ -1,0 +1,25 @@
+info:
+  name: addAdminUser
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseURL}}/admin/create-admin-user"
+  body:
+    type: json
+    data: |-
+      {
+          "username":"TestAdmin",
+          "password":"Test"
+      }
+  auth:
+    type: basic
+    username: Anshuk
+    password: Abhay
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

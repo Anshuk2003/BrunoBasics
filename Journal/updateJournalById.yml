@@ -1,0 +1,24 @@
+info:
+  name: updateJournalById
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{baseURL}}/journal/id/6a2412c9455ad6394fad285f"
+  body:
+    type: json
+    data: |-
+      {
+          "content":"Get started with Bruno"
+      }
+  auth:
+    type: basic
+    username: Bruno
+    password: Bruno
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

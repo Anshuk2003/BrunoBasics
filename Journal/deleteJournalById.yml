@@ -1,0 +1,18 @@
+info:
+  name: deleteJournalById
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{baseURL}}/journal/id/6a2412c9455ad6394fad285f"
+  auth:
+    type: basic
+    username: Bruno
+    password: Bruno
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

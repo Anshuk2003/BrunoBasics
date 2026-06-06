@@ -1,0 +1,18 @@
+info:
+  name: getAllJournal
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{baseURL}}/journal"
+  auth:
+    type: basic
+    username: Bruno
+    password: Bruno
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

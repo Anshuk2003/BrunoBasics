@@ -1,0 +1,25 @@
+info:
+  name: updateUser
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{baseURL}}/user"
+  body:
+    type: json
+    data: |-
+      {
+          "username":"ABCD",
+          "password":"ABCD"
+      }
+  auth:
+    type: basic
+    username: ABCTest
+    password: ABC
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
