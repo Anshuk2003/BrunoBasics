@@ -6,17 +6,23 @@ info:
 http:
   method: POST
   url: "{{baseURL}}/journal/"
-  body:
-    type: json
-    data: |-
-      {
-          "title":"Bruno Basics",
-          "content":"Learning Bruno Basics"
-      }
   auth:
     type: basic
     username: Bruno
     password: Bruno
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        const body={
+          "title":"Bruno Journal Entry",
+          "content": "Adding Bruno's first journal Entry"
+        };
+
+        req.setHeader("Content-Type", "application/json");
+        req.setBody(body);
+        console.log(req.getName())
 
 settings:
   encodeUrl: true

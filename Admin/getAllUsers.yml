@@ -11,6 +11,18 @@ http:
     username: Anshuk
     password: Abhay
 
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("200 status code", function () {
+          expect(res.getStatus()).to.eql(200);
+        });
+  assertions:
+    - expression: res.status
+      operator: eq
+      value: "200"
+
 settings:
   encodeUrl: true
   timeout: 0
