@@ -11,6 +11,25 @@ http:
     username: Bruno
     password: Bruno
 
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("body has title", function () {
+          expect(res.getBody()).to.have.property("title");
+          });
+
+        test("200 status code", function () {
+          expect(res.getStatus()).to.eql(200);
+        });
+  assertions:
+    - expression: res.status
+      operator: eq
+      value: "200"
+    - expression: res.body.title
+      operator: eq
+      value: Journal Entries Retrieved
+
 settings:
   encodeUrl: true
   timeout: 0
