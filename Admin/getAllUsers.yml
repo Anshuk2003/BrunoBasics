@@ -13,6 +13,32 @@ http:
 
 runtime:
   scripts:
+    - type: after-response
+      code: |-
+        const response = res.getBody();
+
+        const rowData = response.map(user => ({
+            username: user.username,
+            roles: user.roles.join(", "),
+            journals: user.journalEntries.length,
+            createdDate: user.id.date
+        }));
+
+        const columnDefinitions = [
+            { field: "username", filter: true, floatingFilter: true },
+            { field: "roles", filter: true, floatingFilter: true },
+            { field: "journals", filter: true, floatingFilter: true },
+            { field: "createdDate", filter: true, floatingFilter: true }
+        ];
+
+        bru.visualize('table', {
+          name: 'tableUsers',
+          provider: 'ag-grid',
+          props: {
+            columnDefinitions,
+            rowData
+          }
+        });
     - type: tests
       code: |-
         test("200 status code", function () {
