@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseURL}}/public/health-check"
+  url: "{{process.env.BASE_URL}}/public/health-check"
   auth: inherit
 
 settings:
