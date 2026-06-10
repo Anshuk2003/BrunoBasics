@@ -1,0 +1,18 @@
+info:
+  name: greetings
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{baseURL}}/user"
+  auth:
+    type: basic
+    username: Anshuk
+    password: Abhay
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
