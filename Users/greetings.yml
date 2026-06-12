@@ -8,8 +8,8 @@ http:
   url: "{{baseURL}}/user"
   auth:
     type: basic
-    username: Anshuk
-    password: Abhay
+    username: Bruno
+    password: "{{userPassword}}"
 
 settings:
   encodeUrl: true

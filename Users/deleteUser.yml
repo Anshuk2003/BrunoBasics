@@ -9,7 +9,7 @@ http:
   auth:
     type: basic
     username: ABCD
-    password: ABCD
+    password: "{{userPassword}}"
 
 settings:
   encodeUrl: true

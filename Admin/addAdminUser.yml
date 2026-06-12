@@ -16,7 +16,7 @@ http:
   auth:
     type: basic
     username: Anshuk
-    password: Abhay
+    password: "{{adminPassword}}"
 
 settings:
   encodeUrl: true

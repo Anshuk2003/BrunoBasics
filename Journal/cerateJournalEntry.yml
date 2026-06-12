@@ -9,7 +9,7 @@ http:
   auth:
     type: basic
     username: Bruno
-    password: Bruno
+    password: "{{userPassword}}"
 
 runtime:
   scripts:

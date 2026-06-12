@@ -2,3 +2,7 @@ name: local
 variables:
   - name: baseURL
     value: http://localhost:8080
+  - secret: true
+    name: adminPassword
+  - secret: true
+    name: userPassword
